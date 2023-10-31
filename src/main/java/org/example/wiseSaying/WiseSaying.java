@@ -1,4 +1,4 @@
-package org.example;
+package org.example.wiseSaying;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,6 +11,5 @@ public class WiseSaying {
     private long id;
     private String title;
     private String content;
+
 }
-
-

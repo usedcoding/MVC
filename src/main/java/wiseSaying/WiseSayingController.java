@@ -77,11 +77,8 @@ public class WiseSayingController {
             String content = sc.nextLine();
             wiseSaying.setContent(content);
 
-
         }
-
     }
-
     private WiseSaying wiseSayingFindById(long id) {
         for (int i = 0; i <wiseSayingList.size(); i++){
             WiseSaying wiseSaying = wiseSayingList.get(i);

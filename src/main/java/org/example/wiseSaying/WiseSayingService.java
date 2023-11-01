@@ -4,33 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WiseSayingService {
-    long lastId = 0;
     List<WiseSaying> wiseSayingList = new ArrayList<>();
-
-
-    public long create(String title, String content) {
-
-        lastId++;
-        WiseSaying wiseSaying = new WiseSaying(lastId, title, content);
+    long id = 0;
+    public long  create(long id, String title, String content) {
+        id++;
+        WiseSaying wiseSaying = new WiseSaying(id, title, content);
         wiseSayingList.add(wiseSaying);
 
-        return lastId;
+        return id;
     }
 
-    public List<WiseSaying> getWiseSayingListAll() {
+    public List<WiseSaying> getWiseSayingListAll () {
         return wiseSayingList;
     }
 
-
-
-    public void remove(WiseSaying wiseSaying) {
-       wiseSayingList.remove(wiseSaying);
-
-    }
-
-    public void modify(WiseSaying wiseSaying, String title, String content) {
-        wiseSaying.setTitle(title);
-        wiseSaying.setContent(content);
+    public void remove (WiseSaying wiseSaying) {
+        wiseSayingList.remove(wiseSaying);
     }
 
     public WiseSaying wiseSayingFindById(long id) {
@@ -41,5 +30,10 @@ public class WiseSayingService {
             }
         }
         return null;
+    }
+
+    public void modify(WiseSaying wiseSaying, String title, String content) {
+        wiseSaying.setTitle(title);
+        wiseSaying.setContent(content);
     }
 }

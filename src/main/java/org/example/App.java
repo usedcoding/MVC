@@ -35,9 +35,9 @@ public class App {
 
                 wiseSayingController.modify();
 
-                }
             }
-
         }
+
     }
+}
 
